@@ -1,0 +1,10 @@
+def logistic_growth(N, r, K, t):
+    return K / (1 + ((K - N) / N) * (2.71828 ** (-r * t)))
+
+# Example usage:
+initial_population = 1000  # Initial population size
+growth_rate = 0.1  # Growth rate
+carrying_capacity = 5000  # Carrying capacity
+time = 10  # Time (in years)
+population_at_t = logistic_growth(initial_population, growth_rate, carrying_capacity, time)
+print("Population after", time, "years:", population_at_t)
